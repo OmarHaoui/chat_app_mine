@@ -1,16 +1,10 @@
 # my_chat_app
 
-A new Flutter project.
+A Chat app Flutter project.
 
-## Getting Started
+## Disclaimer:
+This project is for demonstration purposes only and not intended for any use. Unauthorized use, 
+reproduction or distribution of this project, or any part thereof, is strictly prohibited.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+T
