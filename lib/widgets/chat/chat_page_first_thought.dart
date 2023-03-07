@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class ChatPage extends StatefulWidget {
-  const ChatPage({super.key});
-  static String id = "chatPage";
-  @override
-  State<ChatPage> createState() => _ChatPageState();
-}
-
-class _ChatPageState extends State<ChatPage> {
+class ChatPageFirst extends StatelessWidget {
+  ChatPageFirst({super.key});
   String name = "Jhon Doe";
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -124,12 +119,7 @@ class _ChatPageState extends State<ChatPage> {
                     ),
                     child: Container(
                       height: 100,
-                      child: Row(children: [
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width / 2.6,
-                          child: Image.asset("assets/images/chat1.jpeg"),
-                        ),
-                      ]),
+                      child: Row(children: []),
                     ),
                   ),
                 ],

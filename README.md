@@ -1,16 +1,11 @@
 # my_chat_app
 
-A new Flutter project.
+A new Chat app Flutter project.
 
-## Getting Started
+## Notice
 
-This project is a starting point for a Flutter application.
+This project is for portfolio purposes only therefore any distributions or modifications, or use of this software or a part of it, is strictly prohibited.
 
-A few resources to get you started if this is your first Flutter project:
+### Disclaimer
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The bottom_nav_bar.dart and the bottom_nav_item.dart flies are licenced under the Apache License, Version 2.0, January 2004, You may obtain a copy of the License at: http://www.apache.org/licenses/LICENSE-2.0

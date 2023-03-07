@@ -1,0 +1,25 @@
+- users (collection)
+  - {user-id} (document)
+    - name
+    - email
+    - bio
+    - image
+    - contacts (subcollection)
+      - {contact-id} (document)
+        - name
+        - email
+        - bio
+        - image
+
+- chats (collection)
+  - {chat-id} (document)
+    - participants (array of user-ids)
+    - last message
+      - content
+      - sender
+      - timestamp
+    - messages (subcollection)
+      - {message-id} (document)
+        - content
+        - sender
+        - timestamp

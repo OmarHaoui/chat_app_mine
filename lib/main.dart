@@ -1,21 +1,30 @@
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:my_chat_app/pages/register_page.dart';
+import 'package:flutter/material.dart';
+
 import 'firebase_options.dart';
-import 'pages/chat_page.dart';
-import 'pages/header_page.dart';
-import 'pages/login_page.dart';
+import 'pages/auth/add_profile_page.dart';
+import 'pages/auth/login_page.dart';
+import 'pages/auth/profile_page.dart';
+import 'pages/auth/register_page.dart';
+import 'pages/chat/chat_list_page.dart';
+import 'pages/chat/chat_page.dart';
+import 'pages/chat/search_page.dart';
+import 'pages/home/header_page.dart';
+import 'pages/home/splash_page.dart';
+import 'services/munipulating_dummy_data_service.dart';
+import 'utilities/constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,15 +32,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Messenger',
       theme: ThemeData(
-        fontFamily: "Lato",
-        primarySwatch: Colors.amber,
+        fontFamily: "Inter",
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: primarySwatch),
+        canvasColor: kwhiteColor,
       ),
-      initialRoute: HeaderPage.id,
+      initialRoute: SplashPage.id,
       routes: {
+        SplashPage.id: (context) => SplashPage(),
         HeaderPage.id: (context) => HeaderPage(),
         LoginPage.id: (context) => LoginPage(),
-        ChatPage.id: (context) => ChatPage(),
         RegisterPage.id: (context) => RegisterPage(),
+        AddProfilePage.id: (context) => AddProfilePage(),
+        ChatListPage.id: (context) => ChatListPage(),
+        SearchPage.id: (context) => SearchPage(),
+        ProfilePage.id: (context) => ProfilePage(),
+        ChatPage.id: (context) => ChatPage(),
+        Uploader.id: (context) => Uploader(),
       },
     );
   }

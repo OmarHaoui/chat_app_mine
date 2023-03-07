@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_chat_app/themes.dart';
+import 'package:my_chat_app/utilities/constants.dart';
 
 class CostumeTextFormField extends StatefulWidget {
   CostumeTextFormField({
@@ -32,12 +32,11 @@ class _CostumeTextFormFieldState extends State<CostumeTextFormField> {
         },
         decoration: InputDecoration(
           hintText: widget.hintText,
-          label: Padding(
-            padding: const EdgeInsets.only(left: 5),
-            child: Text(widget.lableText, style: TextStyle(fontSize: 20)),
-          ),
+          hintStyle: TextStyle(fontSize: 22),
+          contentPadding: EdgeInsets.symmetric(vertical: 27, horizontal: 20),
+          //label: Text(widget.lableText, style: TextStyle(fontSize: 20)),
           alignLabelWithHint: true,
-          suffix: widget.isPassword
+          suffixIcon: widget.isPassword
               ? IconButton(
                   onPressed: () {
                     setState(() {
@@ -50,20 +49,22 @@ class _CostumeTextFormFieldState extends State<CostumeTextFormField> {
                         : Icons.circle_outlined,
                     color: Colors.grey,
                     size: 18,
-                  ))
+                  ),
+                )
               : null,
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: kPrimaryColor,
-              width: 3,
-            ),
+
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(width: 3, color: kprimaryColor),
+            borderRadius: BorderRadius.circular(textFieldsBorderRadius),
           ),
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(width: 2, color: kPrimaryColor),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: kgreyColor),
+            borderRadius: BorderRadius.circular(textFieldsBorderRadius),
           ),
         ),
         controller: widget.controller,
         obscureText: widget.obscureText,
+        style: TextStyle(fontSize: 22),
         validator: (value) {
           if (widget.isPassword) {
             if (widget.isConfirmePassword) {

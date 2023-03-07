@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../themes.dart';
+import '../../utilities/constants.dart';
 
 class defaultButtton extends StatelessWidget {
   defaultButtton({
@@ -18,7 +18,7 @@ class defaultButtton extends StatelessWidget {
     return ElevatedButton(
       style: ButtonStyle(
         //backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-        foregroundColor: MaterialStateProperty.all<Color>(kBlackColor),
+        foregroundColor: MaterialStateProperty.all<Color>(kwhiteColor),
         textStyle: MaterialStateProperty.all<TextStyle>(
           TextStyle(
             fontSize: 30,
@@ -31,7 +31,7 @@ class defaultButtton extends StatelessWidget {
         ),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
       ),
